@@ -45,8 +45,8 @@ class Tournament:
 class TournamentTest(unittest.TestCase):
 
     @classmethod
-    def setUpClass(self):
-        self.all_results = {}
+    def setUpClass(cls):
+        cls.all_results = {}
 
     def setUp(self):
         self.run1 = Runner('Усейн', 10)
@@ -54,8 +54,8 @@ class TournamentTest(unittest.TestCase):
         self.run3 = Runner('Ник', 3)
 
     @classmethod
-    def tearDown(self):
-        pprint(self.all_results)
+    def tearDown(cls):
+        pprint(cls.all_results)
 
     def test_1(self):
         tournam1 = Tournament(90, self.run1, self.run3)
